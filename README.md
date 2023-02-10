@@ -29,25 +29,28 @@ Additionally, create a launch file to start the whole simulation.
 ### Pseudocodes
 The **pseudocodes** for this node is provided over here for an overview of the program.
 
-Initialize the node
-Create publisher and subscriber
+    Initialize the node
+    Create publisher and subscriber
 
-Define publisher callback function:
-    Extract position and velocity data from odometry message
-    Create custom message with the data
-    Publish the custom message
+    Define publisher callback function:
+        Extract position and velocity data from odometry message
+        Create custom message with the data
+        Publish the custom message
 
-Define action client function:
-    Create action client and connect to action server
-    Loop:
-        Wait for user input
-        If input is "c":
-            Cancel goal
-        Else:
-            Convert input to goal message
-            Send goal to the action server
+    Define action client function:
+        Create action client and connect to action server
+        Loop:
+            Wait for user input
+            If input is "c":
+                Cancel goal
+            Else:
+                Convert input to goal message
+                Send goal to the action server
 
-Call action client function
+    Call action client function
+
+
+
 
 
 
