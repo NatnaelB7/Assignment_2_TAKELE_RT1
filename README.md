@@ -49,6 +49,35 @@ The **pseudocodes** for this node is provided over here for an overview of the p
 
     Call action client function
 
+5. **node_b_print_goal_r_c.py** - It is a service node, when it is called, it prints the number of goal reached and cancelled. The script creates a service that listens to the */reaching_goal/result* topic and counts the number of goals that have been cancelled and reached.
+6. **node_c_print_dist_spd.py** - The robot's average speed and distance from the target are printed out by using this node. These parameters are taken from the */posxy_velxy* topic as a custom message.
+
+
+## Launch 
+
+A Ros launch file will allow you to start everything you need, from just one file. You can create as many parameters and start as many nodes as you want. You can also create groups of parameters and nodes with a prefix. You can even use some conditional statements, and combine multiple launch files inside one launch file. This way, you will be able to quickly launch your application, and to create different launch files for different startup modes of your robot. *roslaunch* is a tool for easily launching multiple ROS nodes locally, as well as setting parameters on the Parameter Server. It includes options to automatically respawn processes that have already died.
+
+Our ROS launch file is: > assignment2.launch
+
+
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find assignment_2_2022)/launch/sim_w1.launch" />
+    <param name="desired_pos_x" value= "0.0" />
+    <param name="desired_pos_y" value= "1.0" />
+    <param name="frequency" type="double" value="1.0" />
+    
+    <node pkg="assignment_2_2022" type="wall_follow_service.py" name="wall_follower" />
+    <node pkg="assignment_2_2022" type="go_to_point_service.py" name="go_to_point"  />
+    <node pkg="assignment_2_2022" type="bug_as.py" name="bug_action_service" output="screen" />
+    <node pkg="assignment_2_2022" type="node_a_action_client.py" name="node_a_action_client" output="screen" launch-prefix="xterm -hold -e" />
+    <node pkg="assignment_2_2022" type="node_b_print_goal_r_c.py" name="node_b_print_goal_r_c"  />
+    <node pkg="assignment_2_2022" type="node_c_print_dist_spd.py" name="node_c_print_dist_spd" output="screen" launch-prefix="xterm -hold -e" />
+</launch>
+
+
+
+
 
 
 
