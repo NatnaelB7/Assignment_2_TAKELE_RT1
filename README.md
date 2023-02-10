@@ -86,7 +86,16 @@ It is vital to install the xterm library by using the following command to print
 >sudo apt-get install xterm -y
 
 Then, use the following commands to run it smoothly:
->git clone 
+1. Duplicate your repository in the *src* folder of your workspace
+>git clone https://github.com/NatnaelB7/Assignment_2_TAKELE_RT1.git
+2. Build the workspace in your root folder
+>catkin_make
+3. Launch the simulation
+>rospack find assignment_2_2022
+>source /root/Assignment_2/devel/setup.bash
+>roslaunch assignment_2_2002 assignment2.launch
+
+## Conclusion
 
 
 
