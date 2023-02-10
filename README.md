@@ -77,7 +77,16 @@ Our ROS launch file is:
            </launch>
 
 
+## Installing and Running
 
+Before doing anything, run the master by using this command:
+>roscore &
+
+It is vital to install the xterm library by using the following command to print out the outputs for each node.
+>sudo apt-get install xterm -y
+
+Then, use the following commands to run it smoothly:
+>git clone 
 
 
 
