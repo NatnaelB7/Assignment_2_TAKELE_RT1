@@ -1,4 +1,4 @@
-# Assignment 2 - Two Wheeled Mobile Robot
+# Assignment 2: Two-Wheeled Mobile Robot
 This is a simple, two-wheeled robot that is coded and developed by *Natnael Berhanu Takele*.
 
 ## Assignment Description
