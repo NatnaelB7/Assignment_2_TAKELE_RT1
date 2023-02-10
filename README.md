@@ -92,7 +92,9 @@ Then, use the following commands to run it smoothly:
 >catkin_make
 3. Launch the simulation
 >rospack find assignment_2_2022
+
 >source /root/Assignment_2/devel/setup.bash
+
 >roslaunch assignment_2_2002 assignment2.launch
 
 ## Conclusion
