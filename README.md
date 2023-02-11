@@ -27,7 +27,7 @@ Additionally, create a launch file to start the whole simulation.
 4. **node_a_action_client.py** - It is another python script file that deals with asking the user to enter the coordinates (x, y) or cancel them that the robot has to reach. It creates a publisher "pub" that publishes a custom message *"Posxy_velxy"* on the topic *"/posxy_velxy"*. The custom message contains four fields *"msg_pos_x"*, *"msg_pos_y"*, *"msg_vel_x"*, *"msg_vel_y"* that represent the position and velocity of the robot.
 
 ### Pseudocodes
-The **pseudocodes** for this node is provided over here for an overview of the program.
+The **pseudocode** for this node is provided over here for an overview of the program.
 
     Initialize the node
     Create publisher and subscriber
