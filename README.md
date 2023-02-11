@@ -97,7 +97,19 @@ Then, use the following commands to run it smoothly:
 
 >roslaunch assignment_2_2002 assignment2.launch
 
+## Possible Improvements
+
+I suggest some possible improvements for this assignment. These are:
+
+- To clearly see the robot's goal, we may place a graphic marker in the environment that depicts the position it needs to achieve.
+- Integrating the robot's position in the display, whether by pointing an arrow in that direction or showing a 3D model of the robot.
+- The robot usually decides for itself which path to follow when it comes across a hurdle. It would be better for it to decide which way to go depending on the shortest path to the intended location.
+
 ## Conclusion
+
+To conclude, we have created a package that contains three different nodes. Each node performs a specific task. The first node that we developed implements an action client, allowing the user to set a target or cancel it. By relying on the values, it also publishes the robot's position and velocity as a custom message on the topic. The other node prints the number of goals reached and cancelled. The third node prints the robot's average speed and distance from the target after subscribing to the robot's position and velocity (using the custom message). We also created a launch file to start the entire simulation environment and our six different nodes.
+
+
 
 
 
