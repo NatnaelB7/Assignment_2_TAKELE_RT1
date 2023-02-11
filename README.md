@@ -53,7 +53,7 @@ The **pseudocodes** for this node is provided over here for an overview of the p
 6. **node_c_print_dist_spd.py** - The robot's average speed and distance from the target are printed out by using this node. These parameters are taken from the */posxy_velxy* topic as a custom message.
 
 
-## Launch 
+## Launch File
 
 A Ros launch file will allow you to start everything you need, from just one file. You can create as many parameters and start as many nodes as you want. You can also create groups of parameters and nodes with a prefix. You can even use some conditional statements, and combine multiple launch files inside one launch file. This way, you will be able to quickly launch your application, and to create different launch files for different startup modes of your robot. *roslaunch* is a tool for easily launching multiple ROS nodes locally, as well as setting parameters on the Parameter Server. It includes options to automatically respawn processes that have already died.
 
